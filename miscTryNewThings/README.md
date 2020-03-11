@@ -75,3 +75,9 @@ I know systems programming at low levels - C, assembly, some C++. While I did so
 * polymorphism
 
 - If time permits, we will also understand where exactly do OOP errors/issues (running the wrong method, accessing private variable from main() etc.) come from, where they are highlighted and more.
+
+
+# Queue
+A basic implementation of a statically allocated, wrap-around queue is present. Used for separate "unit-testing" (being generous with that word) the logic and edge-cases of a queue as required for an embedded kernel project.
+
+As of 11 March 2020, 4 pm, this implementation works within reasonable input parameters. Run "make queue" to obtain the executable and "./queue" to run.

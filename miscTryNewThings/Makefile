@@ -1,8 +1,10 @@
-CC = g++
-
 oopASM : checkClassASM.cpp
-	g++ -S -g -Og checkClassASM.cpp -o checkClassASM.s 
-	g++ -g -Og checkClassASM.cpp -o oopASM 
+	g++ -g -Og checkClassASM.cpp -o oopASM
+	objdump -d oopASM > oopASM.s
+
+lambdas : lambdas.cpp
+	g++ -g -Og lambdas.cpp -o lambdas
+	objdump -d lambdas > lambdas.s
 
 learnc : learnC.c
 	gcc -g -Og learnC.c -o learnC
@@ -11,5 +13,9 @@ queue : queue.c
 	gcc -g -Og queue.c -o queue
 
 clean : 
-	rm oopASM
-	rm learnC
+	$(RM) oopASM
+	$(RM) learnC
+	$(RM) lambdas
+	$(RM) queue
+	$(RM) *.o
+	$(RM) *.s

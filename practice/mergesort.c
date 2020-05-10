@@ -3,7 +3,8 @@
  *
  * The input strings are in global memory. 
  *
- * This is a "naive" implementation.
+ * This is a "naive" implementation. 
+ * Very limited error checking done.
  *
  * */
 

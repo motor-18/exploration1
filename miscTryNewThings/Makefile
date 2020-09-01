@@ -12,10 +12,15 @@ learnc : learnC.c
 queue : queue.c
 	gcc -g -Og queue.c -o queue
 
+modulus : modulus.c
+	gcc -g modulus.c -o modulus
+	objdump -d modulus > modulus.s
+
 clean : 
 	$(RM) oopASM
 	$(RM) learnC
 	$(RM) lambdas
 	$(RM) queue
+	$(RM) modulus
 	$(RM) *.o
 	$(RM) *.s
